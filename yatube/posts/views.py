@@ -3,7 +3,7 @@ from django.shortcuts import render
 
 # Create your views here.
 def index(request):
-    return HTTPResponse('Главная страница')
+    return HttpResponse('Главная страница')
 
 def group_posts(request):
-    return HTTPResponse('Список сообществ')
+    return HttpResponse('Список сообществ')
