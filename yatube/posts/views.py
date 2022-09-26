@@ -9,6 +9,6 @@ def index(request):
 #    return HttpResponse('Главная страница')
 
 def group_posts(request, slug):
-    template = 'posts/group_list.html'
+    template = 'posts/group'
     return render(request, template)
 #    return HttpResponse(f'Список сообществ {slug}')
