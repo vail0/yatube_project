@@ -1,14 +1,14 @@
 from turtle import title
 from django.http import HttpResponse
 from django.shortcuts import render
-
+from .models import Post
 
 # Create your views here.
 def index(request):
     template = 'posts/index.html'
-    title = 'Это главная странциа проекта Yatube'
+    posts = Post.objects.order_by('-pub_date')[:10]
     context = {
-               'title': title,
+               'posts': posts,
     }
     return render(request, template, context)
 #    return HttpResponse('Главная страница')
